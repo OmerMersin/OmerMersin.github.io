@@ -23,6 +23,10 @@
     --border-color: #334155;
 }
 
+.dark-theme .logo img {
+    filter: brightness(1.2);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -68,9 +72,14 @@ nav {
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    transition: var(--transition);
 }
 
 .nav-links {
