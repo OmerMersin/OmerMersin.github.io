@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ömer Mersin | Software Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">ÖM</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Ömer Mersin</h1>
+                <h2>Software Engineer & Robotics Enthusiast</h2>
+                <p>Specializing in autonomous systems, computer vision, and drone technologies</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary">View Projects</a>
+                    <a href="#contact" class="btn secondary">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://avatars.githubusercontent.com/u/96687572?v=4" alt="Ömer Mersin">
+                </div>
+                <div class="about-text">
+                    <p>Hello! I'm Ömer, a software engineer with a passion for robotics, autonomous systems, and computer vision. My work focuses on developing cutting-edge solutions for drones, autonomous vehicles, and video processing applications.</p>
+                    
+                    <p>With experience in C++ and Python programming, I build robust software optimized for performance, especially in resource-constrained environments like embedded systems and real-time applications.</p>
+                    
+                    <h3>Skills</h3>
+                    <div class="skills">
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">Autonomous Systems</span>
+                        <span class="skill-tag">Drone Technology</span>
+                        <span class="skill-tag">MAVLink</span>
+                        <span class="skill-tag">GPU Acceleration</span>
+                        <span class="skill-tag">DeepStream</span>
+                        <span class="skill-tag">Machine Learning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Drone Track</h3>
+                        <p>DeepStream-Based Object Tracking and Guidance for MAVLink Drones</p>
+                        <div class="project-tags">
+                            <span>C++</span>
+                            <span>DeepStream</span>
+                            <span>Object Tracking</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/OmerMersin/drone-track" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Video Stabilization</h3>
+                        <p>Real-time video stabilization library optimized for GPU acceleration</p>
+                        <div class="project-tags">
+                            <span>C++</span>
+                            <span>GPU</span>
+                            <span>Computer Vision</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/OmerMersin/video-stab" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>RoboTaxi</h3>
+                        <p>Autonomous vehicle project featuring self-driving capabilities</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Autonomous Systems</span>
+                            <span>Robotics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/OmerMersin/RoboTaxi" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>SLabel</h3>
+                        <p>Fast labeling application with automatic labeling using pre-trained models</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Machine Learning</span>
+                            <span>Data Labeling</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/OmerMersin/SLabel" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-intro">Feel free to reach out for collaborations or just a friendly chat</p>
+            
+            <div class="contact-options">
+                <a href="https://github.com/OmerMersin" class="contact-card" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                </a>
+                <div class="contact-card" id="email-contact">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <div class="hidden-content" id="email-content">
+                        <a href="mailto:contact@omermersin.com">contact@omermersin.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ömer Mersin. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/OmerMersin" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
