@@ -3,10 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ömer Mersin | Software Engineer</title>
+    <title>Ömer Mersin | SLAM & Autonomous Navigation Engineer</title>
+    <meta name="description" content="Ömer Mersin is a SLAM and autonomous navigation engineer focused on LiDAR-Inertial odometry, robot perception, and autonomous drone systems. Open to robotics roles in the Netherlands, Switzerland, and Germany." />
+    <meta name="keywords" content="SLAM engineer, autonomous navigation, LiDAR-Inertial odometry, ROS 2, drone autonomy, robotics software engineer, computer vision, localization, path planning, Netherlands robotics jobs, Switzerland robotics jobs, Germany robotics jobs" />
+    <meta name="author" content="Ömer Mersin" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Ömer Mersin | SLAM & Autonomous Navigation Engineer" />
+    <meta property="og:description" content="Portfolio featuring LIONav and Smart Gimbal Manager with technical depth in SLAM, planning, and autonomous robotics systems." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://omermersin.github.io/" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ömer Mersin",
+      "jobTitle": "Robotics Engineer",
+      "description": "SLAM and autonomous navigation engineer focused on LiDAR-Inertial odometry and robotics perception systems.",
+      "url": "https://omermersin.github.io/",
+      "sameAs": [
+        "https://github.com/OmerMersin",
+        "https://www.linkedin.com/in/omer-mersin/"
+      ]
+    }
+    </script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -21,22 +43,58 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="theme-toggle">
+                <button class="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
                     <i class="fas fa-moon"></i>
-                </div>
+                </button>
             </nav>
         </div>
     </header>
 
     <section id="home" class="hero">
+        <div class="hero-background"></div>
         <div class="container">
             <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-location-arrow"></i>
+                    <span>Robotics Software Engineer</span>
+                </div>
                 <h1>Ömer Mersin</h1>
-                <h2>Software Engineer at Dronetools</h2>
-                <p>Specializing in autonomous systems, flight control, and computer vision | Sevilla, Spain</p>
+                <h2>SLAM & Perception for Autonomous Systems</h2>
+                <p class="hero-description">Robotics software engineer building real-time localization, perception, and guidance pipelines for autonomous aerial and ground platforms. Currently at Dronetools in Sevilla, Spain.</p>
+                <div class="target-roles">
+                    <span>Robotics Software Engineer</span>
+                    <span>SLAM Engineer</span>
+                    <span>Perception Engineer</span>
+                </div>
+                <div class="hero-focus">
+                    <span>C++</span>
+                    <span>Python</span>
+                    <span>ROS 2</span>
+                    <span>Sensor Fusion</span>
+                    <span>Real-time Systems</span>
+                    <span>LiDAR-IMU Fusion</span>
+                </div>
+                <div class="availability-strip">
+                    <span class="availability-label"><i class="fas fa-briefcase"></i> Open to Robotics Roles</span>
+                    <div class="availability-chips">
+                        <span>Netherlands (NL)</span>
+                        <span>Switzerland (CH)</span>
+                        <span>Germany (DE)</span>
+                    </div>
+                </div>
                 <div class="cta-buttons">
-                    <a href="#projects" class="btn primary">View Projects</a>
-                    <a href="#contact" class="btn secondary">Contact Me</a>
+                    <a href="#projects" class="btn primary">
+                        <span>Explore My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="resume.pdf" class="btn secondary" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-file-alt"></i>
+                        <span>View Resume</span>
+                    </a>
+                    <a href="#contact" class="btn secondary">
+                        <i class="fas fa-envelope"></i>
+                        <span>Get in Touch</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -46,32 +104,60 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <div class="about-image">
-                    <img src="https://avatars.githubusercontent.com/u/96687572?v=4" alt="Ömer Mersin">
+                <div class="about-image-container">
+                    <div class="about-image">
+                        <img src="https://avatars.githubusercontent.com/u/96687572?v=4" alt="Ömer Mersin">
+                    </div>
+                    <div class="experience-card">
+                        <i class="fas fa-briefcase"></i>
+                        <div class="experience-details">
+                            <h4>2+ Years</h4>
+                            <p>Robotics Software Engineering</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="about-text">
-                    <p>Hello! I’m Ömer, a Software Engineer at Dronetools in Sevilla, Spain. I specialize in developing high-performance flight control and autonomous navigation systems for drones using C++. I also work on data processing pipelines and user-facing applications with Python.</p>
+                    <p class="lead-text">I design and ship autonomy software for robots operating in GPS-denied and dynamic environments. My focus is SLAM, state estimation, navigation, and perception pipelines that must run reliably in real time.</p>
                     
-                    <p>I recently graduated with a Bachelor’s degree in Computer Engineering from Duzce University, earning a GPA of 3.24. During my studies, I also completed a study abroad program at the University of Sevilla. My professional experience includes an IT internship at Goodyear and key contributions to the RoboTaxi autonomous vehicle competition, where our team consistently ranked among the top competitors.</p>
-                                        
-                    <h3>Skills</h3>
-                    <div class="skills">
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">MATLAB</span>
-                        <span class="skill-tag">OpenCV</span>
-                        <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">Numpy</span>
-                        <span class="skill-tag">Pandas</span>
-                        <span class="skill-tag">Computer Vision</span>
-                        <span class="skill-tag">Autonomous Systems</span>
-                        <span class="skill-tag">Drone Technology</span>
-                        <span class="skill-tag">Qt/PyQt</span>
-                        <span class="skill-tag">Docker</span>
+                    <p>At Dronetools, I work on autonomous drone navigation and operator systems that connect low-level control, sensor fusion, and mission workflows. I also competed in TEKNOFEST Robotaxi for 3 consecutive years with Team Mekatek, improving the system every year and helping the team reach 3rd place plus Best Team Spirit Award. I am open to relocation for robotics roles in the Netherlands, Switzerland, and Germany.</p>
+
+                    <div class="skills-section">
+                        <h3><i class="fas fa-microchip"></i> Robotics Skill Matrix</h3>
+                        <div class="skill-categories">
+                            <div class="skill-category">
+                                <h4>Core Robotics Engineering</h4>
+                                <div class="skills">
+                                    <span class="skill-tag">C++</span>
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">ROS 2</span>
+                                    <span class="skill-tag">Real-time Systems</span>
+                                    <span class="skill-tag">Multithreaded Pipelines</span>
+                                    <span class="skill-tag">Docker</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Perception & SLAM</h4>
+                                <div class="skills">
+                                    <span class="skill-tag">LiDAR-Inertial Odometry</span>
+                                    <span class="skill-tag">FAST-LIO</span>
+                                    <span class="skill-tag">Sensor Fusion</span>
+                                    <span class="skill-tag">OpenCV</span>
+                                    <span class="skill-tag">YOLO-based Detection</span>
+                                    <span class="skill-tag">Video Stabilization & Tracking</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Navigation, Control & Deployment</h4>
+                                <div class="skills">
+                                    <span class="skill-tag">3D ESDF Planning</span>
+                                    <span class="skill-tag">Autonomous Decision-Making</span>
+                                    <span class="skill-tag">MAVLink (PX4/ArduPilot)</span>
+                                    <span class="skill-tag">GStreamer/RTSP</span>
+                                    <span class="skill-tag">CUDA + NVIDIA Jetson</span>
+                                    <span class="skill-tag">WPF/Qt Operator Tools</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -80,75 +166,328 @@
 
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-header">
+                <span class="section-tag">Flagship Work</span>
+                <h2 class="section-title">SLAM & Autonomy Portfolio</h2>
+                <p class="section-subtitle">Four flagship and award-winning systems that demonstrate end-to-end robotics capability: perception, real-time mapping, planning, controls, and deployable software architecture.</p>
+            </div>
             <div class="project-grid">
-                <div class="project-card" data-project-id="smart-gimbal">
+                <div class="project-card featured flagship" data-project-id="lionav">
+                    <div class="project-image">
+                        <div class="project-placeholder lionav-demo">
+                            <div class="demo-stack">
+                                <span><i class="fas fa-video"></i> Mission Replay Demo</span>
+                                <span><i class="fas fa-cubes"></i> Point Cloud Mapping</span>
+                                <span><i class="fas fa-route"></i> Trajectory Plot</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay-badge">Flagship Project</div>
+                    </div>
                     <div class="project-content">
-                        <h3>Smart Gimbal Controller</h3>
-                        <p>Comprehensive control software for DroneTools' Smart Gimbal solution with advanced stabilization, targeting, and mapping capabilities</p>
+                        <div class="project-header">
+                            <h3>LIONav</h3>
+                            <div class="project-icon">
+                                <i class="fas fa-drone"></i>
+                            </div>
+                        </div>
+                        <p>LiDAR-Inertial Odometry Navigation framework for autonomous operation in GPS-denied environments. Combines FAST-LIO-GPU, map optimization, and ESDF-based planning for robust navigation and safe return behaviors.</p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>FAST-LIO-GPU odometry fused with LiDAR + IMU streams</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Pose-graph backend with loop-closure consistency checks</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Hybrid 3D ESDF local planner + global routing layer</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>KPI tracking: drift, loop latency, planning success, and RTL safety margin</span>
+                            </div>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric-item">
+                                <h4>Algorithms</h4>
+                                <p>FAST-LIO, pose graph, ESDF planning</p>
+                            </div>
+                            <div class="metric-item">
+                                <h4>Architecture</h4>
+                                <p>Modular ROS 2 autonomy stack</p>
+                            </div>
+                            <div class="metric-item">
+                                <h4>Demos</h4>
+                                <p>Mission replay, point cloud, trajectory analysis</p>
+                            </div>
+                        </div>
                         <div class="project-tags">
-                            <span>C#</span>
-                            <span>.NET</span>
-                            <span>RESTful API</span>
-                            <span>Entity Framework</span>
-                            <span>MVC</span>
+                            <span>ROS 2</span>
+                            <span>LiDAR-IMU Fusion</span>
+                            <span>FAST-LIO-GPU</span>
+                            <span>ESDF</span>
+                            <span>MAVLink</span>
+                            <span>Autonomous Navigation</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/OmerMersin/SmartGimbalController" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/OmerMersin/LIONav" target="_blank" rel="noopener noreferrer" class="github-link">
+                                <i class="fab fa-github"></i> View Source
+                            </a>
+                            <button class="details-link" onclick="event.stopPropagation();">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
                         </div>
                     </div>
                 </div>
                 
-                <div class="project-card" data-project-id="video-stab">
+                <div class="project-card flagship" data-project-id="smart-gimbal">
+                    <div class="project-image">
+                        <img src="images/Smart Gimbal Manager/Screenshot 2025-07-21 133609.png" alt="Smart Gimbal Manager Interface">
+                        <div class="project-overlay-badge">Flagship Project</div>
+                    </div>
                     <div class="project-content">
-                        <h3>Video Stabilization</h3>
-                        <p>Real-time video stabilization library optimized for GPU acceleration</p>
+                        <div class="project-header">
+                            <h3>Smart Gimbal Manager</h3>
+                            <div class="project-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                        </div>
+                        <p>Professional-grade UAV ground control station (GCS) for real-time gimbal, payload, telemetry, video, and mapping workflows across surveillance, inspection, and emergency operations.</p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Multi-protocol gimbal control (BaseCam, Viewlink, DJI) with clean abstraction layers</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Dual map/video operations with camera footprint projection and terrain intersection tools</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Low-latency telemetry + video pipeline with recording, replay, and geospatial export workflows</span>
+                            </div>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric-item">
+                                <h4>Platform</h4>
+                                <p>Windows WPF desktop app on .NET 6 (C#)</p>
+                            </div>
+                            <div class="metric-item">
+                                <h4>Architecture</h4>
+                                <p>MVVM + modular solution structure (40+ projects)</p>
+                            </div>
+                            <div class="metric-item">
+                                <h4>Ops Scope</h4>
+                                <p>Gimbal, mapping, video, cloud telemetry, and mission tooling</p>
+                            </div>
+                        </div>
                         <div class="project-tags">
-                            <span>C++</span>
-                            <span>OpenCV</span>
-                            <span>CUDA</span>
+                            <span>C#</span>
+                            <span>.NET 6</span>
+                            <span>WPF</span>
+                            <span>MVVM</span>
+                            <span>GMap.NET</span>
+                            <span>ArcGIS/Cesium</span>
+                            <span>MQTT</span>
+                            <span>FFmpeg + OpenCV</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/OmerMersin/video-stab" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/OmerMersin/SmartGimbalController" target="_blank" rel="noopener noreferrer" class="github-link">
+                                <i class="fab fa-github"></i> View Source
+                            </a>
+                            <button class="details-link" onclick="event.stopPropagation();">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-project-id="pdf-editor">
+                <div class="project-card flagship" data-project-id="video-stab">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <div class="project-overlay-badge">Flagship Project</div>
+                    </div>
                     <div class="project-content">
-                        <h3>Online PDF Editor</h3>
-                        <p>Open source, web-based online pdf editor</p>
+                        <div class="project-header">
+                            <h3>Video Stabilization Engine</h3>
+                            <div class="project-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                        </div>
+                        <p>Real-time, GPU-accelerated video stabilization and ultra-low-latency RTSP streaming library with seamless passthrough or processing modes, optimized for NVIDIA Jetson edge deployments.</p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Dual-mode RTSP: zero-processing passthrough or full processing with hot switching</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>GPU stabilization, roll correction (Canny + Hough), and configurable smoothing modes</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>DeepStream detection/tracking and Jetson hardware-encoder path for minimum latency</span>
+                            </div>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric-item">
+                                <h4>Latency</h4>
+                                <p>~10-20 ms passthrough, ~50-100 ms processing mode</p>
+                            </div>
+                            <div class="metric-item">
+                                <h4>Architecture</h4>
+                                <p>gstd + gst-interpipe with instant mode switching</p>
+                            </div>
+                            <div class="metric-item">
+                                <h4>Robotics Use</h4>
+                                <p>Stabilized FPV/perception streams for drones and robots</p>
+                            </div>
+                        </div>
                         <div class="project-tags">
-                            <span>Java</span>
-                            <span>JavaScript</span>
-                            <span>HTML5/CSS3</span>
-                            <span>Spring Boot</span>
-                            <span>MVC</span>
+                            <span>C++17</span>
+                            <span>OpenCV</span>
+                            <span>CUDA</span>
+                            <span>GStreamer + gstd</span>
+                            <span>gst-interpipe</span>
+                            <span>DeepStream</span>
+                            <span>RTSP</span>
+                            <span>NVIDIA Jetson</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/OmerMersin/Pdf" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/OmerMersin/video-stab" target="_blank" rel="noopener noreferrer" class="github-link">
+                                <i class="fab fa-github"></i> View Source
+                            </a>
+                            <button class="details-link" onclick="event.stopPropagation();">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card flagship award" data-project-id="robotaxi">
+                    <div class="project-image">
+                        <img src="teknofest1.jpeg" alt="TEKNOFEST Robotaxi Team Mekatek">
+                        <div class="project-overlay-badge">Award-Winning Project</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>TEKNOFEST Robotaxi (Team Mekatek)</h3>
+                            <div class="project-icon">
+                                <i class="fas fa-car-side"></i>
+                            </div>
+                        </div>
+                        <p>Autonomous vehicle competition project where our team achieved 3rd place and the Best Team Spirit Award. I contributed to real-time perception and sensor-fusion decision making under track constraints.</p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Drivable-area detection using image-processing pipelines</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Label/sign detection with YOLO for real-time scene understanding</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Sensor-fusion based autonomous driving and decision logic</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Competed 3 years in a row and improved system robustness each season</span>
+                            </div>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric-item">
+                                <h4>Awards</h4>
+                                <p>3rd Place + Best Team Spirit Award</p>
+                            </div>
+                            <div class="metric-item">
+                                <h4>Perception</h4>
+                                <p>Drivable area + YOLO label detection</p>
+                            </div>
+                            <div class="metric-item">
+                                <h4>Autonomy</h4>
+                                <p>Multi-sensor fusion for driving decisions</p>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span>Autonomous Driving</span>
+                            <span>Image Processing</span>
+                            <span>YOLO</span>
+                            <span>Sensor Fusion</span>
+                            <span>Real-time Decision Making</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://cdn.t3kys.com/media/upload/userFormUpload/S2zQDD78jTrgGQ8giJVPf4P3l6sOHqiW.pdf" target="_blank" rel="noopener noreferrer" class="github-link">
+                                <i class="fas fa-file-pdf"></i> Team Proof
+                            </a>
+                            <a href="https://www.teknofest.org/en/competitions/robotaxi-full-scale-autonomous-vehicle-competition/" target="_blank" rel="noopener noreferrer" class="details-link">
+                                <i class="fas fa-external-link-alt"></i> Competition
+                            </a>
+                            <button class="details-link" onclick="event.stopPropagation();">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
+            <p class="project-footnote">Additional robotics work and experiments are available on <a href="https://github.com/OmerMersin" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
         </div>
     </section>
 
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-intro">Feel free to reach out for collaborations or just a friendly chat</p>
+            <div class="section-header">
+                <span class="section-tag">Connect</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">Open to SLAM, robotics perception, and autonomous navigation opportunities across Europe.</p>
+            </div>
             
-            <div class="contact-options">
-                <a href="https://github.com/OmerMersin" class="contact-card" target="_blank">
-                    <i class="fab fa-github"></i>
-                    <h3>GitHub</h3>
-                </a>
-                <div class="contact-card" id="email-contact">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <div class="hidden-content" id="email-content">
-                        <a href="mailto:omermersin02@gmail.com">omermersin02@gmail.com</a>
+            <div class="contact-content">
+                <div class="contact-intro-box">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Available for NL / CH / DE roles</h3>
+                    <p>I am actively exploring robotics software roles focused on autonomy, localization, and navigation in the Netherlands, Switzerland, and Germany. Open to relocation and remote collaboration in European time zones.</p>
+                </div>
+                
+                <div class="contact-options">
+                    <a href="https://github.com/OmerMersin" class="contact-card" target="_blank" rel="noopener noreferrer">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3>GitHub</h3>
+                            <p>Check out my repositories</p>
+                        </div>
+                        <i class="fas fa-arrow-right contact-arrow"></i>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/omer-mersin/" class="contact-card" target="_blank" rel="noopener noreferrer">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3>LinkedIn</h3>
+                            <p>Let's connect professionally</p>
+                        </div>
+                        <i class="fas fa-arrow-right contact-arrow"></i>
+                    </a>
+                    
+                    <div class="contact-card" id="email-contact" role="button" tabindex="0" aria-expanded="false" aria-controls="email-content">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Email</h3>
+                            <p>Drop me a message</p>
+                        </div>
+                        <i class="fas fa-chevron-down contact-arrow"></i>
+                        <div class="hidden-content" id="email-content">
+                            <a href="mailto:omermersin02@gmail.com">omermersin02@gmail.com</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -157,9 +496,9 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Ömer Mersin. All rights reserved.</p>
+            <p>&copy; 2026 Ömer Mersin. All rights reserved.</p>
             <div class="social-links">
-                <a href="https://github.com/OmerMersin" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/OmerMersin" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
             </div>
         </div>
     </footer>
