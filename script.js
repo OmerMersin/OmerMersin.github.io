@@ -91,45 +91,99 @@ document.addEventListener('DOMContentLoaded', () => {
                         
                         <div class="overlay-section">
                             <h3>Project Overview</h3>
-                            <p>LIONav (LiDAR-Inertial Odometry Navigation) is an autonomy framework for GPS-denied flight. It combines state estimation, mapping, and planning into a single ROS 2 stack designed for robust navigation in indoor and industrial environments.</p>
+                            <p>LIONav is a modular ROS 2 autonomy stack for GPS-denied drone navigation. It fuses LiDAR and IMU for real-time localization, builds GPU TSDF/ESDF maps, plans through flyable graph structures, runs an always-on Smart RTL path, and exposes both web and native ground-station bridges.</p>
+                        </div>
+
+                        <div class="overlay-section">
+                            <h3>What Problem It Solves</h3>
+                            <ul>
+                                <li>Autonomous operation in obstacle-dense environments where GPS is unavailable</li>
+                                <li>Reduced pilot workload through layered autonomy and fallback behavior</li>
+                                <li>Continuously valid return-pathing via Smart RTL rather than naive history replay</li>
+                                <li>Field operation support through project recording, replay, and map lifecycle tooling</li>
+                            </ul>
                         </div>
 
                         <div class="overlay-section">
                             <h3>Visual Demonstrations</h3>
-                            <div class="overlay-demo-grid">
-                                <div class="overlay-demo-card">
-                                    <h4>Mission Replay Video</h4>
-                                    <p>End-to-end run showing takeoff, navigation, obstacle handling, and safe RTL behavior.</p>
+                            <div class="image-gallery">
+                                <div class="gallery-item">
+                                    <img src="output.gif" alt="LIONav mission replay GIF">
+                                    <p class="image-caption">Real-time shortest return-to-launch path discovery</p>
                                 </div>
-                                <div class="overlay-demo-card">
-                                    <h4>Point Cloud Reconstruction</h4>
-                                    <p>Live LiDAR map updates aligned with IMU-driven odometry during aggressive motion.</p>
-                                </div>
-                                <div class="overlay-demo-card">
-                                    <h4>Trajectory and Drift Plot</h4>
-                                    <p>Evaluation plot for loop-closure consistency and drift stabilization across mission segments.</p>
+                                <div class="gallery-item">
+                                    <img src="output2.gif" alt="LIONav point cloud and trajectory GIF">
+                                    <p class="image-caption">Live mapping output: point cloud evolution, trajectory updates, and planner response</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="overlay-section">
-                            <h3>Algorithmic Pipeline</h3>
+                            <h3>Launch-Orchestrated Architecture (flyable_autonomy.launch.py)</h3>
                             <ul>
-                                <li>FAST-LIO-GPU front-end for real-time LiDAR-IMU odometry</li>
-                                <li>Pose graph backend with loop-closure validation</li>
-                                <li>Voxel mapping bridge supporting TSDF/ESDF representations</li>
-                                <li>Hybrid planner: local 3D ESDF + global mission routing</li>
-                                <li>Smart RTL strategy with topology-aware safety checks</li>
+                                <li>FAST_LIO for LiDAR-inertial odometry and registered clouds</li>
+                                <li>nvblox_fastlio_bridge for GPU TSDF/ESDF mapping</li>
+                                <li>pose_graph_backend for iSAM2 global consistency and loop closure</li>
+                                <li>flyable_pose_graph_builder + planner for ESDF-validated graph planning</li>
+                                <li>smart_rtl_planner_node for always-on obstacle-aware return pathing</li>
+                                <li>lionav_planner_manager for Level 0-5 autonomy and fallback orchestration</li>
+                                <li>lionav_project_manager for recording, replay, and map/project lifecycle</li>
+                                <li>ardupilot_mavlink_bridge for FCU command and setpoint integration</li>
+                                <li>lionav_web_bridge + web server for browser telemetry and viewing</li>
+                                <li>lionav_native_bridge for UDP binary native GCS connectivity</li>
                             </ul>
                         </div>
 
                         <div class="overlay-section">
-                            <h3>Performance KPIs</h3>
+                            <h3>Smart RTL (Flagship Differentiator)</h3>
                             <ul class="overlay-kpi-list">
-                                <li>Odometry drift consistency across repeated routes</li>
-                                <li>Loop-closure detection latency and correction impact</li>
-                                <li>Planner success ratio in cluttered map regions</li>
-                                <li>Safety margin preservation during RTL decisions</li>
+                                <li>Hybrid model with dynamic local tail and persistent static corridor memory</li>
+                                <li>Anchor selection balancing local traversal cost and remaining route cost</li>
+                                <li>Monotonic progress guards and static-path repair when ESDF invalidates segments</li>
+                                <li>Safer than naive backtracking because it adapts to updated free space and obstacles</li>
+                            </ul>
+                        </div>
+
+                        <div class="overlay-section">
+                            <h3>Planner Manager Autonomy Ladder</h3>
+                            <ul>
+                                <li>Level 0: Failsafe control</li>
+                                <li>Level 1: Pure backtrack</li>
+                                <li>Level 2: Shortcut backtrack with validation</li>
+                                <li>Level 3: In-map navigation</li>
+                                <li>Level 4: Risk-limited exploration</li>
+                                <li>Level 5: Full frontier-style exploration</li>
+                            </ul>
+                        </div>
+
+                        <div class="overlay-section">
+                            <h3>Ground Station Software (lionav_viewer_gcs)</h3>
+                            <ul>
+                                <li>C++17 + Qt6 cockpit with OpenGL 3D point cloud, pose, path, and Smart RTL overlays</li>
+                                <li>Telemetry and autonomy-state supervision with event and notification feeds</li>
+                                <li>Project browser operations: record, list, load, replay, seek, speed control</li>
+                                <li>Dual RGB/thermal stream workflows with operator controls and visualization layers</li>
+                            </ul>
+                        </div>
+
+                        <div class="overlay-section">
+                            <h3>Quantified Scope</h3>
+                            <ul class="overlay-kpi-list">
+                                <li>Launch footprint: 11 declared nodes, 5 included launch files, 1 additional process</li>
+                                <li>Core package set in this autonomy pipeline: 11 packages</li>
+                                <li>Custom ROS interfaces across key packages: 40 files</li>
+                                <li>lionav_planner_manager: 17 custom msg/srv/action interfaces</li>
+                                <li>lionav_project_manager: 18 custom msg/srv/action interfaces</li>
+                                <li>Approximate key-package code volume: ~43k lines (.cpp/.hpp/.py/.yaml)</li>
+                            </ul>
+                        </div>
+
+                        <div class="overlay-section">
+                            <h3>Current Status / In Progress</h3>
+                            <ul>
+                                <li>Some project-manager export and GCS sync paths are present as TODO service stubs</li>
+                                <li>Several subsystems are launch-toggle optional (collision shield, MAVLink bridge, GPU viewer, IMU transform)</li>
+                                <li>Stack is optimized for Jetson/edge deployment while remaining modular for desktop testing</li>
                             </ul>
                         </div>
                         

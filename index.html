@@ -174,13 +174,7 @@
             <div class="project-grid">
                 <div class="project-card featured flagship" data-project-id="lionav">
                     <div class="project-image">
-                        <div class="project-placeholder lionav-demo">
-                            <div class="demo-stack">
-                                <span><i class="fas fa-video"></i> Mission Replay Demo</span>
-                                <span><i class="fas fa-cubes"></i> Point Cloud Mapping</span>
-                                <span><i class="fas fa-route"></i> Trajectory Plot</span>
-                            </div>
-                        </div>
+                        <img src="output.gif" alt="LIONav SLAM mapping output GIF">
                         <div class="project-overlay-badge">Flagship Project</div>
                     </div>
                     <div class="project-content">
@@ -190,46 +184,49 @@
                                 <i class="fas fa-drone"></i>
                             </div>
                         </div>
-                        <p>LiDAR-Inertial Odometry Navigation framework for autonomous operation in GPS-denied environments. Combines FAST-LIO-GPU, map optimization, and ESDF-based planning for robust navigation and safe return behaviors.</p>
+                        <p>Modular ROS 2 autonomy stack for GPS-denied drone navigation, combining FAST-LIO odometry, GPU ESDF mapping, pose-graph consistency, multi-level planning, Smart RTL, safety failsafes, MAVLink integration, and real-time GCS bridges.</p>
                         <div class="project-highlights">
                             <div class="highlight-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>FAST-LIO-GPU odometry fused with LiDAR + IMU streams</span>
+                                <span>Launch orchestration of 11 nodes + 5 included launches + web telemetry server</span>
                             </div>
                             <div class="highlight-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Pose-graph backend with loop-closure consistency checks</span>
+                                <span>Smart RTL with hybrid dynamic tail + static corridor memory and continuous ESDF replanning</span>
                             </div>
                             <div class="highlight-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Hybrid 3D ESDF local planner + global routing layer</span>
+                                <span>6-level autonomy manager with automatic planner fallback plus independent safety watchdog</span>
                             </div>
                             <div class="highlight-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>KPI tracking: drift, loop latency, planning success, and RTL safety margin</span>
+                                <span>Project manager for multi-stream recording/replay and field mission lifecycle tooling</span>
                             </div>
                         </div>
                         <div class="project-metrics">
                             <div class="metric-item">
-                                <h4>Algorithms</h4>
-                                <p>FAST-LIO, pose graph, ESDF planning</p>
+                                <h4>System Scope</h4>
+                                <p>11 core packages, ~43k LOC across core pipeline</p>
                             </div>
                             <div class="metric-item">
-                                <h4>Architecture</h4>
-                                <p>Modular ROS 2 autonomy stack</p>
+                                <h4>Interfaces</h4>
+                                <p>40 custom ROS interfaces (planner/project managers)</p>
                             </div>
                             <div class="metric-item">
-                                <h4>Demos</h4>
-                                <p>Mission replay, point cloud, trajectory analysis</p>
+                                <h4>Ground Control</h4>
+                                <p>WebSocket bridge, UDP native bridge, Qt6 native GCS</p>
                             </div>
                         </div>
                         <div class="project-tags">
-                            <span>ROS 2</span>
-                            <span>LiDAR-IMU Fusion</span>
-                            <span>FAST-LIO-GPU</span>
-                            <span>ESDF</span>
+                            <span>ROS 2 Humble</span>
+                            <span>FAST-LIO</span>
+                            <span>nvblox TSDF/ESDF</span>
+                            <span>GTSAM iSAM2</span>
+                            <span>Smart RTL</span>
+                            <span>Planner Manager</span>
+                            <span>Safety Watchdog</span>
                             <span>MAVLink</span>
-                            <span>Autonomous Navigation</span>
+                            <span>Web + Native GCS Bridges</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/OmerMersin/LIONav" target="_blank" rel="noopener noreferrer" class="github-link">
