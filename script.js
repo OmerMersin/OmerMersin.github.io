@@ -457,7 +457,11 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryImages.forEach(img => {
                 img.addEventListener('click', (e) => {
                     e.stopPropagation();
-                    openLightbox(img.src, img.alt);
+                    const galleryItem = img.closest('.gallery-item');
+                    const captionFromCard = galleryItem
+                        ? galleryItem.querySelector('.image-caption')?.textContent?.trim()
+                        : '';
+                    openLightbox(img.src, captionFromCard || img.alt);
                 });
             });
         }, 100);
