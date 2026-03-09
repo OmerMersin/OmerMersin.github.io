@@ -184,49 +184,56 @@
                                 <i class="fas fa-drone"></i>
                             </div>
                         </div>
-                        <p>Modular ROS 2 autonomy stack for GPS-denied drone navigation, combining FAST-LIO odometry, GPU ESDF mapping, pose-graph consistency, multi-level planning, Smart RTL, safety failsafes, MAVLink integration, and real-time GCS bridges.</p>
+                        <p>End-to-end autonomous drone navigation stack for GPS-denied flight in caves, mines, tunnels, and industrial interiors. Covers every layer from sensor fusion and GPU mapping to 6-level autonomy management, Smart RTL, MAVLink flight control, a custom binary comms protocol, and a cross-platform ground station — all designed, architected, and implemented solo.</p>
                         <div class="project-highlights">
                             <div class="highlight-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Launch orchestration of 11 nodes + 5 included launches + web telemetry server</span>
+                                <span>Three-pillar architecture: autonomous flight stack, multi-session relocalization for repeat inspections, and a cross-platform Qt6 GCS (Linux · Windows · Android)</span>
                             </div>
                             <div class="highlight-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Smart RTL with hybrid dynamic tail + static corridor memory and continuous ESDF replanning</span>
+                                <span>Always-on Smart RTL — weighted A* with clearance-aware costs, 0.5 s replan cycle, dynamic prefix + cached static corridor; immediately executable on comms loss</span>
                             </div>
                             <div class="highlight-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>6-level autonomy manager with automatic planner fallback plus independent safety watchdog</span>
+                                <span>6-level autonomy hierarchy (Full Exploration → Failsafe) with automatic degradation, independent safety watchdog, ESDF-filtered velocity gate, and stream-health failsafe trigger</span>
                             </div>
                             <div class="highlight-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Project manager for multi-stream recording/replay and field mission lifecycle tooling</span>
+                                <span>Custom LION binary UDP protocol with packet fragmentation/reassembly — streams 50 M-point clouds to GCS over constrained wireless links with bi-directional command plane</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Multi-session relocalization: Scan Context retrieval + ICP/NDT refinement loads prior map bundles for repeat-inspection workflows without GPS or ground truth</span>
                             </div>
                         </div>
                         <div class="project-metrics">
                             <div class="metric-item">
-                                <h4>System Scope</h4>
-                                <p>11 core packages, ~43k LOC across core pipeline</p>
+                                <h4>Autonomy Depth</h4>
+                                <p>Sensor fusion → SLAM → planning → safety → FC execution in a single deployable stack</p>
                             </div>
                             <div class="metric-item">
-                                <h4>Interfaces</h4>
-                                <p>40 custom ROS interfaces (planner/project managers)</p>
+                                <h4>GCS Rendering</h4>
+                                <p>Up to 50M points live on constrained hardware over custom binary protocol</p>
                             </div>
                             <div class="metric-item">
-                                <h4>Ground Control</h4>
-                                <p>WebSocket bridge, UDP native bridge, Qt6 native GCS</p>
+                                <h4>Operational Resilience</h4>
+                                <p>Runs under comms loss, degraded sensors, and GPS-denied environments by design</p>
                             </div>
                         </div>
                         <div class="project-tags">
                             <span>ROS 2 Humble</span>
+                            <span>C++17</span>
                             <span>FAST-LIO</span>
-                            <span>nvblox TSDF/ESDF</span>
+                            <span>nvblox CUDA ESDF</span>
                             <span>GTSAM iSAM2</span>
+                            <span>Scan Context</span>
                             <span>Smart RTL</span>
-                            <span>Planner Manager</span>
-                            <span>Safety Watchdog</span>
-                            <span>MAVLink</span>
-                            <span>Web + Native GCS Bridges</span>
+                            <span>6-Level Autonomy</span>
+                            <span>Custom Binary Protocol</span>
+                            <span>Qt6 Cross-Platform GCS</span>
+                            <span>MAVLink / ArduPilot</span>
+                            <span>WebGPU / WebGL2</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/OmerMersin/LIONav" target="_blank" rel="noopener noreferrer" class="github-link">
